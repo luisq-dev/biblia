@@ -83,3 +83,6 @@ GeneratedPluginRegistrant.java
 .svn/
 .swiftpm/
 migrate_working_dir/
+
+# Artefactos de compilación Android
+/android/build/
