@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Biblia 1960</title>
+  <rect width="1024" height="1024" fill="#172C3A"/>
+  <path d="M352 224H704V752H352C330 752 312 734 312 712V264C312 242 330 224 352 224Z" fill="#F5F0E5"/>
+  <path d="M354 224V704" fill="none" stroke="#C3A36B" stroke-width="8"/>
+  <path d="M608 224H640V344L624 332L608 344Z" fill="#C3A36B"/>
+  <path d="M532 352V536M466 414H598" fill="none" stroke="#172C3A" stroke-width="19" stroke-linecap="round"/>
+  <path d="M352 704H704V752H352C339 752 328 741 328 728C328 715 339 704 352 704Z" fill="#DDD8CB"/>
+  <path d="M354 728H672" fill="none" stroke="#172C3A" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+</svg>

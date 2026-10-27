@@ -1,0 +1,35 @@
+name: Verificar aplicación
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Revisar archivos públicos
+        run: python3 scripts/check_publication.py --staged
+      - run: python3 -m unittest discover -s scripts/tests -v
+      - name: Instalar Flutter fijado
+        shell: bash
+        run: |
+          git clone --depth 1 --branch 3.47.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+      - run: flutter --version
+      - run: flutter pub get --enforce-lockfile
+      - run: flutter analyze --fatal-infos
+      - run: flutter test

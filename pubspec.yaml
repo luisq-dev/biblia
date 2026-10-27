@@ -1,0 +1,49 @@
+name: biblia
+description: "Biblia 1960: lectura offline, progreso, favoritos y respaldos JSON."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  provider: ^6.1.5+1
+  shared_preferences: ^2.5.6
+  path_provider: ^2.1.6
+  flutter_localizations:
+    sdk: flutter
+  share_plus: ^13.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/bible/
+    - assets/fonts/OFL.txt
+    - assets/fonts/Liberation-LICENSE.txt
+
+  fonts:
+    - family: Literata
+      fonts:
+        - asset: assets/fonts/Literata-Variable.ttf
+    - family: LiberationSans
+      fonts:
+        - asset: assets/fonts/LiberationSans-Regular.ttf
+        - asset: assets/fonts/LiberationSans-Bold.ttf
+          weight: 700
+    - family: LiberationSerif
+      fonts:
+        - asset: assets/fonts/LiberationSerif-Regular.ttf
+        - asset: assets/fonts/LiberationSerif-Bold.ttf
+          weight: 700

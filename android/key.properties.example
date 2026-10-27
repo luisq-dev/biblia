@@ -1,0 +1,6 @@
+# Ejemplo público. NO uses este archivo para guardar contraseñas reales.
+# Ejecuta: python3 scripts/configure_signing.py
+storeFile=../.private/signing/release.jks
+storePassword=CHANGE_ME
+keyAlias=biblia1960
+keyPassword=CHANGE_ME
